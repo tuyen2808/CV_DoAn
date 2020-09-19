@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QL_BanHoa">
+  <DataContextMoniker Name="/QL_BanHoaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="27866243-6530-4332-a4e6-5bb9c8ddef57" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/QL_BanHoaDataContext/ADMIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="338d8c3e-aa86-4520-bd30-aad4b733c1f4" absoluteBounds="6.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0db4d154-823e-4fa4-945e-1e1038be6e48" absoluteBounds="0.75, 5.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/QL_BanHoaDataContext/THELOAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02f08da8-34d8-4877-b89b-bdd349244526" absoluteBounds="0.765, 5.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2123ba1-4fb0-49c9-8093-0e655ea266f2" absoluteBounds="3.5, 5.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/QL_BanHoaDataContext/CHUNGLOAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c28f77c-60c8-46bc-a8b4-f1bb9360f543" absoluteBounds="3.515, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="144884c0-ab24-47e6-a28d-60ec69362082" absoluteBounds="6.25, 1.125, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/QL_BanHoaDataContext/CT_HOADON" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5864a08e-c8bc-452e-a0c8-2dcc431e5c51" absoluteBounds="6.265, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="750a9bd2-789b-49fc-8575-bde2d99643a7" absoluteBounds="3.5, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/QL_BanHoaDataContext/HOADON" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5ac8e86-0e1f-489e-a0c3-32d194b5770e" absoluteBounds="3.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="031a676b-9b11-4ce9-bb59-de91546e0d4d" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QL_BanHoaDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc9fbf0c-41ba-48af-8565-5da462a0cb8c" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.06814697265625); (3.5 : 6.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QL_BanHoaDataContext/THELOAI/THELOAI_CHUNGLOAI" />
+      <nodes>
+        <classShapeMoniker Id="0db4d154-823e-4fa4-945e-1e1038be6e48" />
+        <classShapeMoniker Id="c2123ba1-4fb0-49c9-8093-0e655ea266f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.54734537760417); (6.46875 : 6.54734537760417); (6.46875 : 3.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QL_BanHoaDataContext/CHUNGLOAI/CHUNGLOAI_CT_HOADON" />
+      <nodes>
+        <classShapeMoniker Id="c2123ba1-4fb0-49c9-8093-0e655ea266f2" />
+        <classShapeMoniker Id="144884c0-ab24-47e6-a28d-60ec69362082" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.06814697265625); (6.25 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QL_BanHoaDataContext/HOADON/HOADON_CT_HOADON" />
+      <nodes>
+        <classShapeMoniker Id="750a9bd2-789b-49fc-8575-bde2d99643a7" />
+        <classShapeMoniker Id="144884c0-ab24-47e6-a28d-60ec69362082" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.06814697265625); (3.5 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QL_BanHoaDataContext/KHACHHANG/KHACHHANG_HOADON" />
+      <nodes>
+        <classShapeMoniker Id="031a676b-9b11-4ce9-bb59-de91546e0d4d" />
+        <classShapeMoniker Id="750a9bd2-789b-49fc-8575-bde2d99643a7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

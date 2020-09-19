@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using QL_HoaTuoi.Models;
+@model KHACHHANG
+<h3>Xác Nhận Đặt Hàng</h3>
+<div style="text-align:center;font-weight:bold;background-color:#0ff">
+<p>Thông tin giỏ hàng</p>
+    @*<form action="@Html.Action("DatHang","GioHang")" method="post">*@
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                </div>
+            <div class="form-group col-md-2" style="text-align:left">
+                <label>Họ tên khách hàng: </label>
+             </div>
+             <div class="form-group col-md-6">
+                    @Model.HoTen
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                </div>
+            <div class="form-group col-md-2" style="text-align:left">
+                <label>Ngày mua: </label>
+             </div>
+             <div class="form-group col-md-6">
+                    @DateTime.Now
+            </div>
+        </div>
+        <div class="form-row">
+         <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Số điện thoại: </label>
+            </div>
+        <div class="form-group col-md-6">
+        @Model.SDT
+            </div>
+        </div>
+        <div class="form-group text-center">
+           @* <button type="submit" class="btn btn-danger">Đồng ý mua hàng</button>*@
+            <a href="@Url.Action("XLDatHang","GioHang")" class="btn btn-danger">Đồng ý mua hàng</a>
+        </div>
+       @*</form>*@
+    </div>

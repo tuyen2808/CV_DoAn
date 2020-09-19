@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+@using QL_HoaTuoi.Models;
+@model List<CHUNGLOAI>
+<p>
+    @Html.ActionLink("Thêm Mới","them")
+</p>
+<div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                  <tr>
+                    <th>Mã Sách</th>
+                    <th>Tên Sách</th>
+                    <th>Mô Tả</th>
+                    <th>Hình Ảnh</th>
+                    @*<th>Ngày Cập Nhật</th>*@
+                    <th>Giá Bán</th>
+                    <th>Sửa</th>
+                    <th>Xóa</th>
+                  </tr>
+                </thead>
+@foreach(var sp in Model)
+{
+                <tbody>
+                  <tr>
+                    <td>@sp.MaCL</td>
+                    <td>@sp.TenCL</td>
+                    <td>@sp.DienGia</td>
+                    <td><img style="width:150px;height:150px" src="~/Content/anhHoa/@sp.AnhBia"/></td>
+                    
+                    <td>@sp.GiaBan VND</td>
+                     <td><a href="@Url.Action("sua","Admin", new { ma=@sp.MaCL,name=@sp.TenCL,tl=@sp.MaTL,anhBia=@sp.AnhBia,diengia=@sp.DienGia,price=@sp.GiaBan})">Sửa</a></td>
+                    <td><a href="@Url.Action("xoa","Admin", new { id=@sp.MaCL})">Xóa</a></td>
+                  </tr>
+                </tbody>
+}
+        </table>
+     </div>

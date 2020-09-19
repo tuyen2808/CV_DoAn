@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/assets/css/main.css" rel="stylesheet" />
+
+</head>
+     @RenderBody()
+    <body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="#">HuFi Flower</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="#">Home</a></li>
+					<li><a href="@Url.Action("Index","Home")">Shop Now</a></li>
+					<li><a href="@Url.Action("XemGioHang","GioHang")">Your Cart</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<h1>HuFi Flower</h1>
+					<p>Khai sinh năm 2019, chúng tôi - HuFi Flower tự hào là đơn vị truyền tải thông điệp của bạn theo một cách khác biệt.<br /> 
+                        Vì vậy Hoa Sài Gòn không ngừng sáng tạo, đổi mới  để mang đến cho bạn những lợi ích tốt nhất và làm phong phú đời sống tinh thần của bạn.</p>
+				</div>
+				<video autoplay loop muted playsinline src="~/Content/images/Video Background HD Flower HD Style Proshow styleproshow org1.mp4"></video>
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						@*<h2>Sem turpis amet semper</h2>*@
+						<p>Với mong muốn cuộc sống con người ngày càng phồn thịnh,  hạnh phúc và bình an hơn,  chúng tôi muốn đưa hoa tươi vào cuộc sống như một nhu cầu thiết yếu hằng ngày.<br /> Nhà nhà có hoa, người người trao tặng nhau những bông hoa tươi thắm. Vì chúng tôi tin rằng cuộc sống con người sẽ gặp nhiều may mắn và thuận lợi hơn khi ngắm hoa mỗi ngày. Chúng tôi muốn chia sẻ giá trị này đến với càng nhiều người hơn để góp phần cho một thế giới phát triển và tràn đầy tình yêu..</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+									<h3>Cam kết: Nhanh nhất, giá tốt nhất, chất lượng nhất.</h3>
+								</header>
+								<p>Với sự liên tục cải tiến quy trình, Hoayeuthuong.com nỗ lực đáp ứng trong vòng 2 giờ sẽ giao hoa cho người nhận, chúng tôi là một số ít công ty phục vụ dịch vụ điện hoa cho cả những mẫu hoa có giá từ 100.000đ (5$) mà không có phụ phí gì thêm. Ngoài ra, các mẫu hoa của chúng tôi có xác nhận bảo hành tươi tối thiểu 3 ngày trong điều kiện bình thường.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+									<h3>Cam kết 100% hài lòng</h3>
+								</header>
+								<p>Với nhiều năm kinh nghiệm phục vụ trong ngành điện hoa, chúng tôi hiểu mức độ quan trọng trong công việc của mình là truyền tải đúng và đủ thông điệp của người tặng đến người nhận. Vì thế chúng tôi cam kết 100% sự hài lòng của khách hàng với chúng dịch vụ của chúng tôi. Với bất cứ điều gì không hài lòng bạn đều được hoàn lại 100% phí dịch vụ đã chuyển cho chúng tôi.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<h3>Trở thành công ty điện hoa số 1 tại Việt Nam</h3>
+								</header>
+								<p>Với sự đầu tư nghiêm túc, chúng tôi tập trung nâng cao trải nghiệm người dùng (Customer Experience) kể cả trên môi trường trực tuyến và ngoại tuyến để đem lại một dịch vụ hoàn hảo xứng đáng trong nỗ lực trở thành công ty điện hoa số 1 tại Việt Nam.</p>
+							</div>
+						</section>
+				
+					</div>
+				</div>
+			</section>
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					Không có một nơi nào tốt hơn để bạn lựa chọn cho một dịch vụ điện hoa chuyên nghiệp ngoài Hoayeuthuong.com. Bằng tất cả niềm đam mê và tận tâm, Hoayeuthuong.com luôn chọn những bông hoa tươi nhất và sáng tạo lên những mẫu hoa tuyệt vời để chuyển đến người thân yêu của bạn cùng với những lời chúc tốt đẹp. Với hơn 15.000 điện hoa được chúng tôi chuyển trong năm qua là một sự khởi đầu cho sự tin tưởng tuyệt vời. Ngoài các dịch vụ hoa tươi, hiểu được thêm nhu cầu của bạn, chúng tôi có liên kết với các hãng có uy tín để cung cấp thêm các dịch vụ như: Bánh sinh nhật, Chocolate, Gấu bông, kẹo ngọt, trái cây...
+				</div>
+			</section>
+
+		<!-- Testimonials -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Đội ngũ nhân viên</h2>
+					</header>
+					<div class="testimonials">
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Với nhiều năm kinh nghiệm phục vụ trong ngành điện hoa, chúng tôi hiểu mức độ quan trọng trong công việc của mình là truyền tải đúng và đủ thông điệp của người tặng đến người nhận.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+							
+                                        <span><img src="~/Content/ceo/quan.jpg" alt="" /></span>
+									</div>
+									<p class="credit">- <strong>Hoàng Quân</strong> <span>CEO - Hufi Flower .</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Chúng tôi cam kết 100% sự hài lòng của khách hàng với chúng dịch vụ của chúng tôi.    </p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<span><img src="~/Content/ceo/tuyen.jpg" alt="" /></span>
+									</div>
+									<p class="credit">- <strong>Kim Tuyến</strong> <span>CEO - Hufi Flower .</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Với bất cứ điều gì không hài lòng bạn đều được hoàn lại 100% phí dịch vụ đã chuyển cho chúng tôi..</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="~/Content/ceo/sang.jpg" alt="" />
+									</div>
+									<p class="credit">- <strong>Hoài Sang</strong> <span>CEO - Hufi Flower .</span></p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<div class="col_1_of_4">
+                <h3>Shop hoa tp. HCM</h3>
+                <p>
+                    <strong>Địa chỉ: </strong>
+                    Shop hoa 140 Lê Trọng Tấn (Trường DH CNTP Hồ Chí Minh)
+                </p>
+                <p>
+                    <strong>Điện thoại: </strong><a href="tel:02873002010">028 7300 2010</a>
+
+                </p>
+                <p>
+                    Miễn phí giao hoa tươi trên địa bàn Tp. Hồ Chí Minh: Q.1, Q.3, Q.4, Q.5, Q.6, Q.7, Q.8, Q.10, Q.11, Q. Tân Bình, Q. Bình Thạnh, Q. Phú Nhuận, Q. Tân Phú, Q. Gò Vấp. Các quận khác vui lòng liên hệ để biết thêm chi tiết (Giá giao sẽ từ 30.000đ-70.000đ).
+                </p>
+            
+            </div>
+						</section>
+						<section>
+							<h4>Magna sed ipsum</h4>
+							<ul class="plain">
+								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+					
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+
+        <script src="~/Content/assets/js/jquery.min.js"></script>
+        <script src="~/Content/assets/js/browser.min.js"></script>
+        <script src="~/Content/assets/js/breakpoints.min.js"></script>
+        <script src="~/Content/assets/js/util.js"></script>
+		<script src="~/Content/assets/js/main.js"></script>
+	
+
+	</body>
+</html>

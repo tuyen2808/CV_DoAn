@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "ChiTietSP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using QL_HoaTuoi.Models;
+@model CHUNGLOAI
+
+
+<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img src="~/Content/anhHoa/@Model.AnhBia" style="height:400px;width:300px" /></div>
+						  @*<div class="tab-pane" id="pic-2"><img src="~/Content/anhHoa/@Model.AnhBia" /></div>
+						  <div class="tab-pane" id="pict-3"><img src="~/Content/anhHoa/@Model.AnhBia" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="~/Content/anhHoa/@Model.AnhBia" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="~/Content/anhHoa/@Model.AnhBia" /></div>*@
+						</div>
+						@*<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="~/Content/anhHoa/@Model.AnhBia" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="~/Content/anhHoa/@Model.AnhBia" /></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><img src="~/Content/anhHoa/@Model.AnhBia" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="~/Content/anhHoa/@Model.AnhBia" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="~/Content/anhHoa/@Model.AnhBia" /></a></li>
+						</ul>*@
+						
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title">@Model.TenCL</h3>
+						<div class="rating">
+						</div>
+						<p class="product-description">Mô tả: @Model.DienGia.</p>
+						<h4 class="price">Giá bán: <span>@Model.GiaBan</span></h4>
+						<p class="vote"><strong>91%</strong> Người mua thích sản phẩm <strong>(87 votes)</strong></p>
+						<div class="action">
+							<a href="@Url.Action("ThemGioHang", "GioHang", new { ms=@Model.MaCL,@url=Request.Url.ToString() })"><button class="add-to-cart btn btn-default" type="button">Mua ngay</button></a>
+							@*<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>*@
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

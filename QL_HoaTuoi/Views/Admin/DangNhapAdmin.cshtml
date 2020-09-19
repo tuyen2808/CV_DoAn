@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "DangNhapAdmin";
+    Layout = "~/Views/Shared/_LayoutPageAdmin2.cshtml";
+}
+@using QL_HoaTuoi.Models;
+<form action="@Url.Action("XuLyDangNhapAdmin","Admin")" method="post">
+<div class="login-box">
+  <h1>Login</h1>
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" name="txtDN" placeholder="Username">
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" name="txtMK" placeholder="Password">
+  </div>
+
+  <input type="submit" class="btn" value="Sign in">
+</div>
+    </form>
+<div>
+    <a href="@Url.Action("Index","Home")"><input type="submit"  class="btn" value="Back To Home"></a>
+</div>

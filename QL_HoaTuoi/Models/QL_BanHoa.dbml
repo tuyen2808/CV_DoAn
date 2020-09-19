@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_BanHoa" Class="QL_BanHoaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-UPRR948\SQLEXPRESS;Initial Catalog=QL_BanHoa;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QL_BanHoaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ADMIN" Member="ADMINs">
+    <Type Name="ADMIN">
+      <Column Name="USENAME" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PASS" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THELOAI" Member="THELOAIs">
+    <Type Name="THELOAI">
+      <Column Name="MaTL" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DienGia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="THELOAI_CHUNGLOAI" Member="CHUNGLOAIs" ThisKey="MaTL" OtherKey="MaTL" Type="CHUNGLOAI" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUNGLOAI" Member="CHUNGLOAIs">
+    <Type Name="CHUNGLOAI">
+      <Column Name="MaCL" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenCL" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnhBia" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DienGia" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="GiaBan" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="CHUNGLOAI_CT_HOADON" Member="CT_HOADONs" ThisKey="MaCL" OtherKey="MaCL" Type="CT_HOADON" />
+      <Association Name="THELOAI_CHUNGLOAI" Member="THELOAI" ThisKey="MaTL" OtherKey="MaTL" Type="THELOAI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_HOADON" Member="CT_HOADONs">
+    <Type Name="CT_HOADON">
+      <Column Name="SoCT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SoHD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaCL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CHUNGLOAI_CT_HOADON" Member="CHUNGLOAI" ThisKey="MaCL" OtherKey="MaCL" Type="CHUNGLOAI" IsForeignKey="true" />
+      <Association Name="HOADON_CT_HOADON" Member="HOADON" ThisKey="SoHD" OtherKey="SoHD" Type="HOADON" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOADON" Member="HOADONs">
+    <Type Name="HOADON">
+      <Column Name="SoHD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NgaLap_HD" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HOADON_CT_HOADON" Member="CT_HOADONs" ThisKey="SoHD" OtherKey="SoHD" Type="CT_HOADON" />
+      <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="MaKH" OtherKey="MaKH" Type="KHACHHANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="MST" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="KHACHHANG_HOADON" Member="HOADONs" ThisKey="MaKH" OtherKey="MaKH" Type="HOADON" />
+    </Type>
+  </Table>
+</Database>

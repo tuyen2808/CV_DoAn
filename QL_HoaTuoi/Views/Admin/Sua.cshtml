@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Sửa";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+@using QL_HoaTuoi.Models;
+@model CHUNGLOAI
+<h2>Sửa Sản Phẩm</h2>
+<form action="@Url.Action("XLSua", "Admin")" method="post">
+
+     <div class ="font-weight-bold text-danger text-center">
+                            <br />
+                            <br />
+                        &nbsp&nbsp&nbsp CẬP NHẬT THÔNG TIN SẢN PHẨM<span class="sr-only">(current)</span>
+         <br />
+    </div>
+     <div class="form-group col-md-6">
+                    
+                         <input class="form-control text-center" type="text" placeholder="Mã sản phẩm" name="txtMa" value="@ViewData["txtMa"]" disabled style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Tên sản phẩm" name="txtTen" value="@ViewData["txtTen"]" style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Giá sản phẩm" name="txtGia" value="@ViewData["txtGia"]" style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Mô tả" name="txtMoTa" value="@ViewData["txtMoTa"]" style="margin-left:300px"/>
+                  <br />
+         <a style="margin-left:300px">Hình: </a> <input type="file" class="form-control" name="FileHinh" value="@ViewData["FileHinh"]" style="margin-left:300px" /> 
+         <br/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Mã thể loại" name="txtTheLoai" value="@ViewData["txtTheLoai"]" style="margin-left:300px"/>
+         <br />
+                          
+                    </div>
+                  <div class="form-group text-center">
+                         <button name="btnLuu" type="submit" class="btn btn-danger">Lưu</button>
+                    </div>
+                  <br />
+
+    </form>

@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Đăng Ký</title>
+    <link href="~/Content/css/css-dk.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-w3layouts wrapper">
+		
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="@Url.Action("XuLyDangKy","KhachHang")" method="post">
+					<input class="text" type="text" placeholder="Tài Khoản" name="txtFullName" required="">
+                    <input class="text" type="password" name="txtPass" placeholder="Mật Khẩu" required="">
+                    <input class="text" type="text" placeholder="Họ Tên" name="txtHoTen"   required="">
+                    <input class="text" type="text" placeholder="Địa Chỉ" name="txtDiaChi"   required="">
+                    <input class="text" type="text" placeholder="Giới tính" name="txtGioiTinh" required="">
+                    <input class="text" type="text" placeholder="Mã số thuế" name="txtMST" required="">
+                    <input class="text" type="text" placeholder="Điện Thoại" name="txtSDT" required="">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"></div>
+					</div>
+					<input type="submit" value="SIGNUP">
+				</form>
+				<p>Don't have an Account? <a href="@Url.Action("DangNhap","KhachHang")"> Login Now!</a></p>
+			</div>
+		</div>
+		<!-- copyright -->
+		
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

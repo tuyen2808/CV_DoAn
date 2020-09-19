@@ -1,0 +1,7 @@
+﻿@using QL_HoaTuoi.Models
+@model List<THELOAI>
+
+@foreach (var item in Model)
+{
+     <a class="dropdown-item" href="@Url.Action("HienThiChiTietNhom", "Home", new {id=@item.MaTL})">@item.TenTL</a>
+}

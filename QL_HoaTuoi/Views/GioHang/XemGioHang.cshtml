@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using QL_HoaTuoi.Models;
+@model List<item>
+
+<div style="text-align:center;font-weight:bold;background-color:#ffd800">
+<p>Thông tin giỏ hàng</p>
+    @*<form method="post" action="@Url.Action("DatHang","GioHang")">*@
+<table class="table table-striped" style="width:1000px;height:200px;margin-left:220px ;background-color:#fff">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Mã Hoa</th>
+      <th scope="col">Loại Hoa</th>
+      <th scope="col">Ảnh Sách</th>
+      <th scope="col">Số Lượng</th>
+      <th scope="col">Đơn Giá</th>
+      <th scope="col">Thành tiền</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var item in Model)
+    {
+    <tr>
+      <th scope="row">1</th>
+            <td>@item.maCL</td>
+        `   <td>@item.tenCL</td>
+            <td><img style="width:150px;height:150px" src="~/Content/anhHoa/@item.anhBia"/></td>
+            <td>@item.soLuong</td>
+            <td>@item.donGia</td>
+            <td>@item.thanhTien</td>
+            <td>@Html.ActionLink("X", "XoaGioHang", new {id=@item.maCL})</td>
+    </tr>
+      }
+      <tr>
+        <td style="text-align:right" colspan="7" >Số lượng: @ViewBag.sl - Tổng tiền: @ViewBag.tt</td>
+    </tr>
+  </tbody>
+</table>
+        <div class="form-group text-center">
+           @* <button name="btnDangKy" type="submit" class="btn btn-danger">Mua Hàng</button>*@
+            <a href="@Url.Action("DatHang","GioHang")" class="btn btn-danger">Mua Hàng</a>
+        </div>
+       @*</form> *@
+    </div>

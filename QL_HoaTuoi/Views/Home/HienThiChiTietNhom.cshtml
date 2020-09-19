@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "HienThiChiTietNhom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using QL_HoaTuoi.Models;
+@model List<CHUNGLOAI>
+ 
+@foreach(var sp in Model)
+{
+   <div class="col-md-3">
+              <div class="thumbnail" style="height:500px">
+                <img src="~/Content/anhHoa/@sp.AnhBia" style="width:300px;height:200px" alt="" class="img-responsive">
+                <div class="caption">
+                  <h4 class="pull-right">@sp.GiaBan</h4>
+                  <h4><a href="#">@sp.TenCL - @sp.MaCL</a></h4>
+                  <p>@sp.DienGia.</p>
+                </div>
+                <div class="ratings">
+                  
+                </div>
+                <div class="space-ten"></div>
+                <div class="btn-ground text-center">
+                   <a href="@Url.Action("ThemGioHang", "GioHang", new { ms=@sp.MaCL,@url=Request.Url.ToString() })"><button type="button" class="btn btn-primary">Add To Cart</button></a> 
+                   <a href="@Url.Action("ChiTietSP", new {id =@sp.MaCL })"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view">Quick View</button></a> 
+                </div>
+                <div class="space-ten"></div>
+              </div>
+            </div>
+            
+}
+

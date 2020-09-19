@@ -1,0 +1,88 @@
+﻿body {
+}
+.dropdown {
+   position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown .dropdown-content:hover {
+    display: block;
+}
+.sanpham {
+    padding-top:5px;
+    padding-left:20px;
+    width:200px;
+    height:350px;
+    border:solid 1px;
+    float:left;
+}
+.khung-hinh{
+    width:100%;
+    height:100%;
+}
+.item {
+    width:25%;
+    float:left;
+    padding-left:10px;
+}
+.item-label {
+    background-color:orange;
+    width:100%;
+    height:30px;
+    
+}
+        .product_view .modal-dialog{max-width: 800px; width: 100%;}
+        .pre-cost{text-decoration: line-through; color: #a5a5a5;}
+        .space-ten{padding: 10px 0;}
+
+.navbar-custom {
+    background-color: #ff5500;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
